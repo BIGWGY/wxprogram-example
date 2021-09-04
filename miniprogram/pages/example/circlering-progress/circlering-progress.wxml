@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="padding-top" style="transform: translate(-30rpx, -25rpx);" wx:for="{{[45, 90, 180, 270, 360]}}" wx:for-item="deg">
+    <view class="circle-progress">
+      <block wx:if="{{deg <= 180}}">
+        <view class="variant left-half-circle-progress"
+          style="--left-circle-color: rgb(228, 190,112); transform: rotate({{deg + 45}}deg);">
+        </view>
+        <view class="variant right-half-circle-progress"
+          style="--right-circle-color: rgb(229, 223, 242); --right-circle-deg: 225deg;">
+        </view>
+      </block>
+      <block wx:else>
+        <view class="variant left-half-circle-progress"
+          style="--left-circle-color: rgb(228, 190,112); transform: rotate(225deg);">
+        </view>
+        <view class="variant right-half-circle-progress"
+          style="--right-circle-color: rgb(228, 190,112); --right-circle-deg: {{deg + 45 - 180}}deg"
+          wx:if="{{deg > 180}}">
+        </view>
+      </block>
+
+      <view class="flex flex-direction justify-center align-center"
+        style="height: 100%; transform: translateY(-600rpx);">
+        <view class="text-gray">圆环进度条: {{deg}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+/* {{component}}.wxss */
+/* 圆环 */
+.variant {
+  --left-circle-color: rgb(228, 190,112);
+  --right-circle-deg: 45;
+  --right-circle-color: rgb(228, 190,112);
+}
+
+.circle-progress {
+  width: 300rpx;
+  height: 300rpx;
+  border: 18rpx solid rgb(229, 223, 242);
+  border-radius: 50%;
+}
+
+.left-half-circle-progress {
+  position: relative;
+  left: -18rpx;
+  top: -18rpx;
+  width: 300rpx;
+  height: 300rpx;
+  border: 18rpx solid var(--left-circle-color);
+  border-right: 18rpx solid transparent;
+  border-top: 18rpx solid transparent;
+  border-radius: 50%;
+}
+
+.right-half-circle-progress {
+  position: relative;
+  left: -18rpx;
+  top: -318rpx;
+  width: 300rpx;
+  height: 300rpx;
+  border: 18rpx solid var(--right-circle-color);
+  border-left: 18rpx solid transparent;
+  border-bottom: 18rpx solid transparent;
+  border-radius: 50%;
+  transform: rotate(var(--right-circle-deg));
+}
