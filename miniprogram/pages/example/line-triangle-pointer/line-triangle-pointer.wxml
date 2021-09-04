@@ -1,0 +1,9 @@
+<view class="flex flex-direction bg-white">
+  <view class="grid col-{{colCount}}">
+    <view class="flex flex-direction justify-center align-center" wx:for="{{colCount}}" wx:key="key">
+      <image style="width: 120rpx;height: 120rpx;" src="/pages/image/head.png" bindtap="selectHead" data-head-pos="{{item}}"></image>
+      <view class="">头像{{item}}</view>
+    </view>
+  </view>
+  <view class="variant line-triangle" style="--triangle-transform-x: {{(100 / colCount) / 2 + ((100 / colCount) * headPos - 2)}}%;"></view>
+</view>

@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/example/circlering-progress/circlering-progress"
+    "pages/example/circlering-progress/circlering-progress",
+    "pages/example/line-triangle-pointer/line-triangle-pointer"
   ],
   "window": {
     "backgroundTextStyle": "light",

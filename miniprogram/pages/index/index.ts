@@ -12,6 +12,10 @@ Page({
         title: '圆环百分比',
         navUrl: '/pages/example/circlering-progress/circlering-progress',
       },
+      {
+        title: '线上三角形位置指示',
+        navUrl: '/pages/example/line-triangle-pointer/line-triangle-pointer',
+      },
     ],
 
     userInfo: {},
@@ -34,6 +38,10 @@ Page({
         canIUseGetUserProfile: true
       })
     }
+
+    wx.navigateTo({
+      url: '/pages/example/line-triangle-pointer/line-triangle-pointer'
+    })
   },
   getUserProfile() {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
